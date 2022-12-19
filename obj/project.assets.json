@@ -1801,19 +1801,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Matthew\\.nuget\\packages\\": {}
+    "/Users/matthewvine/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\QACafe\\QACafe.csproj",
+      "projectUniqueName": "/Users/matthewvine/Desktop/qaCafeAssignmentSite/QACafe.csproj",
       "projectName": "QACafe",
-      "projectPath": "G:\\QACafe\\QACafe.csproj",
-      "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
-      "outputPath": "G:\\QACafe\\obj\\",
+      "projectPath": "/Users/matthewvine/Desktop/qaCafeAssignmentSite/QACafe.csproj",
+      "packagesPath": "/Users/matthewvine/.nuget/packages/",
+      "outputPath": "/Users/matthewvine/Desktop/qaCafeAssignmentSite/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/matthewvine/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -1869,7 +1869,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
