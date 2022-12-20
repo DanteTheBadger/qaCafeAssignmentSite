@@ -31,3 +31,6 @@ G:\QACafe\WebAPI\obj\Debug\net7.0\refint\QACafe.dll
 G:\QACafe\WebAPI\obj\Debug\net7.0\QACafe.pdb
 G:\QACafe\WebAPI\obj\Debug\net7.0\QACafe.genruntimeconfig.cache
 G:\QACafe\WebAPI\obj\Debug\net7.0\ref\QACafe.dll
+G:\QACafe\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+G:\QACafe\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\QACafe\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
