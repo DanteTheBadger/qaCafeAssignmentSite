@@ -65,9 +65,3 @@ namespace CoffeeDataConnector
         }
     }
 }
-=======
-﻿using System.Data.SQLite;
-
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
->>>>>>> df0120fdea26ab5f58145cf5e71f1c1277ff5194
