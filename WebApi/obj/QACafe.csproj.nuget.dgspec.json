@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\QACafe\\QACafe.csproj": {}
+    "G:\\QACafe\\WebApi\\QACafe.csproj": {}
   },
   "projects": {
-    "G:\\QACafe\\QACafe.csproj": {
+    "G:\\QACafe\\WebApi\\QACafe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\QACafe\\QACafe.csproj",
+        "projectUniqueName": "G:\\QACafe\\WebApi\\QACafe.csproj",
         "projectName": "QACafe",
-        "projectPath": "G:\\QACafe\\QACafe.csproj",
+        "projectPath": "G:\\QACafe\\WebApi\\QACafe.csproj",
         "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
-        "outputPath": "G:\\QACafe\\obj\\",
+        "outputPath": "G:\\QACafe\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config"

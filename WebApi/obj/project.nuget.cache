@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5lMNxMyJXJm1Fs5A07hi6bv2x1aFMWO7BXMjMZO6DjGwYMqfCEk2ipmfvQOqwL+/7ut6Fambr/fuS9n3KfQQIw==",
+  "dgSpecHash": "H4gGkxFmuEdjS30qi0E/H+5na8hqneJNGgrcR2P9Zor/8tclRCpQuvYgIsMEj2QugLg/G6BMsqjvpJPbx7+c+Q==",
   "success": true,
-  "projectFilePath": "G:\\QACafe\\QACafe.csproj",
+  "projectFilePath": "G:\\QACafe\\WebApi\\QACafe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matthew\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0\\microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
     "C:\\Users\\Matthew\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
