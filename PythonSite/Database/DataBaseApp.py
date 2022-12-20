@@ -1,15 +1,16 @@
 import sqlite3 as sqlite
 class DataBaseController:
     def __init__(self, databaseLocationString):
-        self.dbConnection = sqlite.connect(databaseLocationString)
+        self.dbConnectionString = databaseLocationString
 
     # All Case Execution Query
     def executeQuery(self, queryString, commit=False):
-        with self.dbConnection:
-            dbCur = self.dbConnection.cursor()
+        dbConnection = sqlite.connect(self.dbConnectionString)
+        with dbConnection:
+            dbCur = dbConnection.cursor()
             queryResult = dbCur.execute(queryString)
             if commit == True:
-                self.dbConnection.commit()
+                dbConnection.commit()
         return queryResult
     
     # Reading Data

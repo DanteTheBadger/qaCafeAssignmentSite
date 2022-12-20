@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, url_for
 from Database.DataBaseApp import DataBaseController
 
 def main():
@@ -6,11 +6,20 @@ def main():
     app = Flask(__name__)
 
     @app.route("/")
-    def hello_world():
-        return "<p>Hello, World!</p>"
+    def homePage():
+        return render_template('base.html')
+    
+    @app.route("/Customers")
+    def customerPage():
+        customerData = dataBaseController.ReadAllCustomers().fetchall()
+        clientList = list()
+        for result in customerData:
+            customerProfile = (result[0], result[1], result[2])
+            clientList.append(customerProfile)
+        return render_template('customer.html', customerData=clientList)
 
 
 
-    app.run()
+    app.run(debug=True)
 
 main()
