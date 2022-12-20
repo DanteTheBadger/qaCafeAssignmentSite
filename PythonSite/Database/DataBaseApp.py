@@ -17,9 +17,12 @@ class DataBaseController:
     def ReadAllCustomers(self):
         return self.executeQuery("Select * From Customer;")
 
+    def GetCustomerById(self, customerID):
+        return self.executeQuery(f"SELECT * FROM Customer WHERE customerID = {customerID};")
+
     def ReadAllOrders(self):
         return self.executeQuery("Select * From customerOrders;")
-    
+
     def ReadOrderByID(self, orderID):
         queryString = f"""
         SELECT customerOrders.orderID, orderCoffees.orderCoffeeID, orderCoffees.coffeeName, orderCoffees.cupName

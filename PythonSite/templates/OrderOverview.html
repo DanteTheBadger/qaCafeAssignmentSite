@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %} Order Overview {%endblock%}
+{% block content %}
+{% for entry in orderData %}
+<div class="container-fluid text-center">
+    <div class="row justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">{{ entry[1][1] }} <br> Order: {{ entry[0] }}</h5>
+            <p class="card-text">Ordered Drinks:</p>
+            </div>
+            {% if entry[2]|length >= 1 %}
+                <ul class="list-group list-group-flush"></ul>
+                {% for drink in entry[2] %}
+                <li class="list-group-item">Drink: {{ drink[2] }} -- Size: {{ drink[3] }} <br><a href="">Edit</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+            <p class="card-text">No Drinks in Order<br> <a href="{{ url_for('addDrink',orderID=entry[0]) }}">Would you like to add one?</a></p>
+            {% endif %}
+        </div>
+    <br>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
