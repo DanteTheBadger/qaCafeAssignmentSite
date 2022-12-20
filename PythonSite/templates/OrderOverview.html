@@ -16,11 +16,56 @@
                 {% endfor %}
                 </ul>
             {% else %}
-            <p class="card-text">No Drinks in Order<br> <a href="{{ url_for('addDrink',orderID=entry[0]) }}">Would you like to add one?</a></p>
+            <p class="card-text">No Drinks in Order<br>
+            <!-- Button to trigger the modal to add a drink to the page-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DrinksModal" data-bs-orderID="{{ entry[0] }}">
+                Add to Order
+            </button></p>
             {% endif %}
         </div>
     <br>
     </div>
 </div>
 {% endfor %}
+<!-- Modal that adds a drink to the page -->
+<!-- Modal -->
+<div class="modal fade" id="DrinksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Drink</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="">
+
+            </div>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script>
+    const drinksModalVar = document.getElementById('DrinksModal')
+    drinksModalVar.addEventListener('show.bs.modal', event => {
+        console.log(event.relatedTarget);
+    })
+</script>
 {% endblock %}
