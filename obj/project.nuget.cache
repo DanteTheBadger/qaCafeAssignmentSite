@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Yvuvpxo8m6Zd8QAYpVzm8Q81n+AJATtRFMRMiY9MZwGOxIvlyhNUe924LqXtpaEz+rtanS8dJ3wwPrWJx9iFFg==",
+  "success": true,
+  "projectFilePath": "G:\\QACafe\\QACafe.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Matthew\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.117\\stub.system.data.sqlite.core.netstandard.1.0.117.nupkg.sha512",
+    "C:\\Users\\Matthew\\.nuget\\packages\\system.data.sqlite.core\\1.0.117\\system.data.sqlite.core.1.0.117.nupkg.sha512"
+  ],
+  "logs": []
+}
