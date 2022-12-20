@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD:obj/QACafe.csproj.nuget.dgspec.json
     "G:\\QACafe\\QACafe.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "G:\\QACafe\\QACafe.csproj",
         "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
         "outputPath": "G:\\QACafe\\obj\\",
+=======
+    "/Users/matthewvine/Desktop/qaCafeAssignmentSite/qaCafeAssignmentSite.csproj": {}
+  },
+  "projects": {
+    "/Users/matthewvine/Desktop/qaCafeAssignmentSite/qaCafeAssignmentSite.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/matthewvine/Desktop/qaCafeAssignmentSite/qaCafeAssignmentSite.csproj",
+        "projectName": "qaCafeAssignmentSite",
+        "projectPath": "/Users/matthewvine/Desktop/qaCafeAssignmentSite/qaCafeAssignmentSite.csproj",
+        "packagesPath": "/Users/matthewvine/.nuget/packages/",
+        "outputPath": "/Users/matthewvine/Desktop/qaCafeAssignmentSite/obj/",
+>>>>>>> df0120fdea26ab5f58145cf5e71f1c1277ff5194:obj/qaCafeAssignmentSite.csproj.nuget.dgspec.json
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,12 +51,15 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+<<<<<<< HEAD:obj/QACafe.csproj.nuget.dgspec.json
           "dependencies": {
             "System.Data.SQLite": {
               "target": "Package",
               "version": "[1.0.117, )"
             }
           },
+=======
+>>>>>>> df0120fdea26ab5f58145cf5e71f1c1277ff5194:obj/qaCafeAssignmentSite.csproj.nuget.dgspec.json
           "imports": [
             "net461",
             "net462",
@@ -59,7 +76,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD:obj/QACafe.csproj.nuget.dgspec.json
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+>>>>>>> df0120fdea26ab5f58145cf5e71f1c1277ff5194:obj/qaCafeAssignmentSite.csproj.nuget.dgspec.json
         }
       }
     }

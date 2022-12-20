@@ -12,6 +12,7 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\Matthew\.nuget\packages\" />
   </ItemGroup>
+<<<<<<< HEAD:obj/QACafe.csproj.nuget.g.props
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props')" />
   </ImportGroup>
@@ -19,4 +20,6 @@
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\Matthew\.nuget\packages\entityframework\6.4.4</PkgEntityFramework>
     <PkgSystem_Data_SQLite_EF6 Condition=" '$(PkgSystem_Data_SQLite_EF6)' == '' ">C:\Users\Matthew\.nuget\packages\system.data.sqlite.ef6\1.0.117</PkgSystem_Data_SQLite_EF6>
   </PropertyGroup>
+=======
+>>>>>>> df0120fdea26ab5f58145cf5e71f1c1277ff5194:obj/qaCafeAssignmentSite.csproj.nuget.g.props
 </Project>
