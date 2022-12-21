@@ -67,3 +67,16 @@ class DataBaseController:
     def readCoffeeExtras(self, orderCoffeeID):
         queryString = f"SELECT extrasToOrderCoffee.extraName, extrasToOrderCoffee.amount FROM extrasToOrderCoffee WHERE extrasToOrderCoffee.orderCoffeeID = {orderCoffeeID}"
         return self.executeQuery(queryString)
+
+    # Getting Coffee Data
+    def getCoffees(self):
+        queryString = f"SELECT coffeeName FROM coffees"
+        return self.executeQuery(queryString)
+
+    def getSizeByCoffee(self, coffeeName):
+        queryString =   f"""SELECT cupSizes.SizeName 
+                            FROM cupSizes, cupCoffeeRelation, coffees 
+                            WHERE cupSizes.sizeName = cupCoffeeRelation.sizeName
+                            AND cupCoffeeRelation.coffeeName = coffees.coffeeName
+                            AND coffees.coffeeName = '{coffeeName}'"""
+        return self.executeQuery(queryString)

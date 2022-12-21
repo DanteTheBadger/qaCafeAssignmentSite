@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block title %} Order Overview {% endblock %}
+{% block content %}
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddDrinksModal" data-bs-orderID="AddDrinksTest">Add</button>
+<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#EditDrinksModal" data-bs-drinkID="EditDrinkData">Edit</button>
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#RemoveDrinksModal" data-bs-drinkID="RemoveDrinksTest">Remove</button>
+
+<!-- Edit Drink Modal -->
+<div class="modal fade" id="EditDrinksModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Are you sure you want to remove that modal -->
+<div class="modal fade" id="RemoveDrinksModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Add Drink to Order Modal -->
+<div class="modal fade" id="AddDrinksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Drink</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="">
+
+            </div>
+            <div class="mb-3">
+                <label for="drink-name" class="col-form-label">Drink:</label> <br>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Select Drink</option>
+                  <option value="Brewed Coffee">Brewed Coffee</option>
+                  <option value="Espresso">Espresso</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="cup-size" class="col-form-label">Cup Size:</label> <br>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Select Size</option>
+                <option value="Brewed Coffee">Small</option>
+                <option value="Brewed Coffee">Medium</option>
+                <option value="Brewed Coffee">Large</option>
+                <option value="Espresso">Espresso</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add Drink</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Add Drinks JS -->
+<script>
+    // Add Drinks Modal Code
+    const addDrinksModalVar = document.getElementById('AddDrinksModal')
+    addDrinksModalVar.addEventListener('show.bs.modal', event => {
+        const addActiveButton = event.relatedTarget;
+        const addAttributeValue = addActiveButton.getAttribute('data-bs-orderID');
+        console.log(addAttributeValue);
+      })
+</script>
+<script>
+function getDrinkData()
+  // WebRequest To Build Form
+  fetch("{{ url_for('getAllDrinks') }}")
+    .then(
+    function(response) {
+        if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+            response.status);
+        return;
+        }
+
+        // Examine the text in the response
+        response.json().then(function(data) {
+        console.log(data);
+        return data;
+        });
+    }
+    )
+    .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+    });
+</script>
+
+
+<!-- Remove Drinks JS -->
+<script>
+  // Remove Drinks Modal Code
+  const removeDrinksModalVar = document.getElementById('RemoveDrinksModal')
+  removeDrinksModalVar.addEventListener('show.bs.modal', event => {
+      const removeActiveButton = event.relatedTarget;
+      const removeAttributeValue = removeActiveButton.getAttribute('data-bs-drinkID');
+      console.log(removeAttributeValue);
+    })
+</script>
+
+<!-- Edit Drinks JS -->
+<script>
+  // Edit Drinks Modal Code
+  const editDrinksModalVar = document.getElementById('EditDrinksModal')
+  editDrinksModalVar.addEventListener('show.bs.modal', event => {
+      const editActiveButton = event.relatedTarget;
+      const editAttributeValue = editActiveButton.getAttribute('data-bs-drinkID');
+      console.log(editAttributeValue);
+    })
+</script>
+{% endblock %}

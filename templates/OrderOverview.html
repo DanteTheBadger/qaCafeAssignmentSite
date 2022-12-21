@@ -12,17 +12,18 @@
             {% if entry[2]|length >= 1 %}
                 <ul class="list-group list-group-flush"></ul>
                 {% for drink in entry[2] %}
-                <li class="list-group-item">Drink: {{ drink[2] }} -- Size: {{ drink[3] }} <br><a href="">Edit</a></li>
+                <li class="list-group-item">Drink: {{ drink[2] }} -- Size: {{ drink[3] }}</li>
                 {% endfor %}
                 </ul>
             {% else %}
-            <p class="card-text">No Drinks in Order<br>
+            <p class="card-text">No Drinks in Order<br></p>
+            {% endif %}
             <!-- Button to trigger the modal to add a drink to the page-->
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DrinksModal" data-bs-orderID="{{ entry[0] }}">
-                Add to Order
-            </button></p>
-            {% endif %}
+            <div class="card-body">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DrinksModal" data-bs-orderID="{{ entry[0] }}">Add to Order</button>
+            </div>
+            <br>
         </div>
     <br>
     </div>
@@ -65,7 +66,9 @@
 <script>
     const drinksModalVar = document.getElementById('DrinksModal')
     drinksModalVar.addEventListener('show.bs.modal', event => {
-        console.log(event.relatedTarget);
+        const activeButton = event.relatedTarget;
+        const attributeValue = activeButton.getAttribute('data-bs-orderID')
+        console.log(attributeValue)
     })
 </script>
 {% endblock %}
